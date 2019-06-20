@@ -24,4 +24,12 @@ make all
 Now Sipp is compiled and you can start using it with the following commands.
 
 cd /usr/src/sipp-3.3.990
+
 ./sipp -sn uac -d 200000 -s 123456789 127.0.0.1 -l 10 -r 2 -m 10
+
+
+for media
+./sipp   -sn uac -s 1xxxxxxxxx dst IP:port  -sf uac_pcap.xml -r 1 -l 1 -m 1
+-r : rate Scenario execution rate, default value = 10 times per period, default period = 1000 ms (CPS)
+-l : Limit simultaneous calls (default: 3 * call_duration (s) * rate).
+-m : Calls Stop and exit after specified tests count.
